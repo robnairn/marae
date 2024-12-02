@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Marae Website | Events</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href=
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+	<header>
+		<a href="index.html"><img class="logo" src="images/logo.png" alt="logo 4 hands holding togeather a puzzle"></a>
+		<nav class="primary-navigation">
+			<input type="checkbox" id="check">
+			<label for="check" class="checkbtn">
+				<i class="fas fa-bars"></i>
+			</label>
+			<ul>
+				<li><a class="button" href="index.html">home</a></li>
+				<li><a class="current button" href="events.html">events</a></li>
+				<li><a class="button" href="about.html">about</a></li>
+				<li><a class="button" href="contact.html">contact</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<h1>Events</h1>
+		
+		<section class="events">
+			<div class="event">
+				<div class="event-date">
+					30<span>jun</span>
+				</div>
+				<div class="event-details">
+					<h3>Matariki Weekend</h3>
+					<ul>
+						<li>Sat, 29 Jun - Mon, 1 Jul</li>
+						<li>At our place</li>
+						<li>Christchurch</li>
+					</ul>
+				</div>
+				<div class="event-image">
+					<img src="images/matairki-weekend.png">
+				</div>
+			</div>
+			<div class="event">
+				<div class="event-date">
+					15<span>jul</span>
+				</div>
+				<div class="event-details">
+					<h3>Pou Kohikohinga Māori</h3>
+					<ul>
+						<li>Mon, 15 Jul - Thu, 18 Jul</li>
+						<li>New Brighton beach</li>
+						<li>Christchurch</li>
+					</ul>
+				</div>
+				<div class="event-image">
+					<img src="images/pou-kohikohinga.png">
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer>
+		<div class="footer-content">
+			<nav>
+				<ul>
+					<li><a href="index.html">home</a></li>
+					<li><a href="events.html">events</a></li>
+					<li><a href="about.html">about</a></li>
+					<li><a href="contact.html">contact</a></li>
+				</ul>
+			</nav>
+			<nav>
+				<ul>
+					<li><a href="index.html">home</a></li>
+					<li><a href="events.html">events</a></li>
+					<li><a href="about.html">about</a></li>
+					<li><a href="contact.html">contact</a></li>
+				</ul>
+			</nav>
+			<nav>
+				<ul>
+					<li>1 Long Road</li>
+					<li>Far away</li>
+					<li>Middle of nowhere</li>
+					<li>555 4545</li>
+				</ul>
+			</nav>
+			<a href="index.html"><img class="logo" src="images/logo.png" alt="logo 4 hands holding togeather a puzzle"></a>
+		</div>
+	</footer>
+
+<script>
+let counter = 0;
+slide_show();
+function slide_show() {
+	let x;
+	let slides = document.getElementsByClassName("slide");
+	for (x = 0; x < slides.length; x ++) {
+		slides[x].style.display = "none";  
+	}
+	counter ++;
+	if (counter > slides.length) {counter = 1}    
+	slides[counter - 1].style.display = "grid";  
+	setTimeout(slide_show, 10000);
+}
+</script>
+
+</body>
+</html>
